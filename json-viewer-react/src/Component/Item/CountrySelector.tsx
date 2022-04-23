@@ -1,19 +1,17 @@
 import React from 'react'
 import Select from 'react-select';
 
+import JsonStore from '../../JsonStore';
 
 function CountrySelector() {
-    const country_list = [
-        {label: "default", value : "default"},
-        {label: "US", value : "US"},
-        {label: "KR", value : "KR"},
-
-    ];
+    // const { language_code, setLanguageCode} = jsonStore();
+    //const bears = useStore(state => state.bears);    
+    const {country_code, language_code, setCountryCode, setLanguageCode}  = JsonStore();
 
 
     return (<>    
-         CountrySelector
-         <Select options={country_list} />
+         CountrySelector: {country_code}
+         {/* <Select options={country_list} /> */}
 
     </>);
     
