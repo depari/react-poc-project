@@ -17,14 +17,14 @@ function App() {
   // const [country_code ,setCountryCode] = useState<string>('us');
   // const [language_code,setLanguageCode] = useState<string>('en');  
   //loadJson
-  const {setCountryCode, setLanguageCode, loadJsonFile}  = JsonStore();
+  const {setCurCountryCode, setCurLanguageCode, loadJsonFile}  = JsonStore();
   // loadJsonFile("testpath"); 
   //setCountryCode('ko');
 
   const initJsonFile = (path:string) => {
-    // loadJsonFile(path); 
-    setCountryCode('ko');
-    setLanguageCode('kr');
+    loadJsonFile(path); 
+    //setCurCountryCode('ko');
+    //setCurLanguageCode('kr');
   }
   
 
@@ -36,7 +36,7 @@ function App() {
       <JsonHeaderLayout/>
       <JsonBodyLayout/>      
 
-      <button onClick={() => initJsonFile("test")}>load_Json</button>
+      <button onClick={() => initJsonFile("input.json")}>load_Json</button>
       
     </>
   );

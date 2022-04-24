@@ -1,0 +1,81 @@
+﻿{
+	"default": {
+		"ko": {
+			"title": "삼성계정 약관 동의",
+			"description": "삼성계정 약관에 동의 하면 다양한 서비스를 즐길 수 있어요. ",
+			"footer": "I agree to All  선택하면 다 동의 하는거에요. 자세한 내용은 account.samsung.com 에서 볼수 있어요 ",
+			"btn-viewdetail": "자세히 보기",
+			"cb-all": "모두 동의 하기",
+			"btn-agree": "확인",
+			"skip-title": "건너 띄기",
+			"skip-description": "건너 뛰면 삼성계정을 사용 할수 업습니다. 스킵하시겠습니까.",
+			"skip-btn-ok": "스킵",
+			"skip-btn-cancle": "취소"
+		},
+		"en": {
+			"title": "Samsung Account Agreement (KR)",
+			"description": "Samsung Account Agreement Description",
+			"footer": "If you check I agree to all,..",
+			"btn-viewdetail": "View Detail",
+			"cb-all": "I agree to all",
+			"btn-agree": "Agree",
+			"skip-title": "Skip Agreement",
+			"skip-description": "If you skip this one, ..",
+			"skip-btn-ok": "Skip",
+			"skip-btn-cancle": "cancle"
+		}
+	},
+	"kr": {
+		"ko": {
+			"title": "삼성계정 약관 동의",
+			"description": "삼성계정 약관에 동의 하면 다양한 서비스를 즐길 수 있어요. ",
+			"footer": "I agree to All  선택하면 다 동의 하는거에요. 자세한 내용은 account.samsung.com 에서 볼수 있어요 ",
+			"btn-viewdetail": "자세히 보기",
+			"cb-all": "모두 동의 하기",
+			"btn-agree": "확인",
+			"skip-title": "건너 띄기",
+			"skip-description": "건너 뛰면 삼성계정을 사용 할수 업습니다. 스킵하시겠습니까.",
+			"skip-btn-ok": "스킵",
+			"skip-btn-cancle": "취소"
+		},
+		"en": {
+			"title": "Samsung Account Agreement (KR)",
+			"description": "Samsung Account Agreement Description",
+			"footer": "If you check I agree to all,..",
+			"btn-viewdetail": "View Detail",
+			"cb-all": "I agree to all",
+			"btn-agree": "Agree",
+			"skip-title": "Skip Agreement",
+			"skip-description": "If you skip this one, ..",
+			"skip-btn-ok": "Skip",
+			"skip-btn-cancle": "cancle"
+		}
+	},
+	"us": {
+		"en": {
+			"title": "Samsung Account Agreement (USA)",
+			"description": "Samsung Account Agreement Description",
+			"footer": "If you check I agree to all,..",
+			"btn-viewdetail": "View Detail",
+			"cb-all": "I agree to all",
+			"btn-agree": "Agree",
+			"skip-title": "Skip Agreement",
+			"skip-description": "If you skip this one, ..",
+			"skip-btn-ok": "Skip",
+			"skip-btn-cancle": "cancle"
+		}
+	},
+	"de": {
+		"en": {
+			"title": "Samsung Account Agreement (Germany)",
+			"description": "Samsung Account Agreement Description",
+			"footer": "If you check I agree to all,..",
+			"btn-viewdetail": "View Detail",
+			"btn-agree": "Agree",
+			"skip-title": "Skip Agreement",
+			"skip-description": "If you skip this one, ..",
+			"skip-btn-ok": "Skip",
+			"skip-btn-cancle": "cancle"
+		}
+	}
+}
