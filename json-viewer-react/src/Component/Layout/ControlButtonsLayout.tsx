@@ -1,5 +1,8 @@
 import React from 'react'
 import JsonStore from '../../JsonStore';
+import Button from '@mui/material/Button';
+import ButtonGroup from '@mui/material/ButtonGroup';
+
 
 
 function ControlButtonsLayout() {
@@ -14,12 +17,12 @@ function ControlButtonsLayout() {
     }
     return (
         <>
-            <div>
-                <button onClick={() => initJsonFile("input.json")}>load_Json</button>
-            </div>
-            <div>
-                <button onClick={() => dataUpdate()}>data_fetch</button>
-            </div>
+            <ButtonGroup>
+                <Button variant='outlined' onClick={() => initJsonFile("input.json")}>load_Json</Button>
+  
+                <Button variant='outlined' onClick={() => dataUpdate()}>data_fetch</Button>
+
+            </ButtonGroup>
         </>
     );
 };

@@ -5,6 +5,7 @@ import JsonHeaderLayout from './Component/Layout/JsonHeaderLayout';
 import JsonBodyLayout from './Component/Layout/JsonBodyLayout';
 import ControlButtonsLayout from './Component/Layout/ControlButtonsLayout';
 import JsonStore from './JsonStore';
+import Container from '@mui/material/Container';
 
 
 
@@ -17,12 +18,15 @@ function App() {
 
   return (
     <>      
-      <h1>
-        Hi This is my json Project
-      </h1>
-      <JsonHeaderLayout/>
-      <JsonBodyLayout/>      
-      <ControlButtonsLayout/>
+      <Container fixed>
+        <h1>
+          Hi This is my json Project
+        </h1>
+        <JsonHeaderLayout/>
+        <JsonBodyLayout/>      
+        <ControlButtonsLayout/>
+      </Container>
+      
     </>
   );
 }
