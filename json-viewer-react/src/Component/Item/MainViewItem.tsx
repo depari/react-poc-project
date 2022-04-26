@@ -25,56 +25,63 @@ function MainViewItem() {
   };
 
 
+
   return  (
     <>
+      <div align="center">
+        <h1>{main_title}</h1>
+      </div>
+      <div align="center">
+        <h2>{main_description}</h2>
+      </div>
       
-      <h1>{main_title}</h1>
-      <h2>{main_description}</h2>
-      <div>
+      <div align="right">
         <Button variant="outlined">{item_btn_viewdetail}</Button> 
       </div>
-      <div>
-        <input type={'checkbox'} name={main_cb_all} /> {main_cb_all}
+      {
+        main_cb_all.length > 0  &&
+        <div align="center">
+          <input type={'checkbox'} name={main_cb_all} /> {main_cb_all}
+        </div>
 
+      }
+      
+      
+      <div align="center">
+        <h3>{main_disclaimer}</h3>
       </div>
       
-      
-      <h2>{main_disclaimer}</h2>
-      <div>
-      <Button variant="outlined">{main_btn_agree}</Button>
+      <div align="center">
+        <Button variant="outlined">{main_btn_agree}</Button>
       </div>
-      
-      
 
-  
 
-      <div>
-        
-    <Button variant="outlined" onClick={handleClickOpen}>
-      Trigger Skip
-    </Button>
-    <Dialog
-      open={open}
-      onClose={handleClose}
-      aria-labelledby="alert-dialog-title"
-      aria-describedby="alert-dialog-description"
-    >
-      <DialogTitle id="alert-dialog-title">
-        {skip_title}
-      </DialogTitle>
-      <DialogContent>
-        <DialogContentText id="alert-dialog-description">
-          {skip_description}
-        </DialogContentText>
-      </DialogContent>
-      <DialogActions>
-        <Button onClick={handleClose}>{skip_btn_ok}</Button>
-        <Button onClick={handleClose} autoFocus>
-          {skip_btn_cancel}
+      <div align="right">
+        <Button variant="outlined" onClick={handleClickOpen}>
+          Trigger Skip
         </Button>
-      </DialogActions>
-    </Dialog>
-  </div>
+        <Dialog
+          open={open}
+          onClose={handleClose}
+          aria-labelledby="alert-dialog-title"
+          aria-describedby="alert-dialog-description"
+        >
+          <DialogTitle id="alert-dialog-title">
+            {skip_title}
+          </DialogTitle>
+          <DialogContent>
+            <DialogContentText id="alert-dialog-description">
+              {skip_description}
+            </DialogContentText>
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={handleClose}>{skip_btn_ok}</Button>
+            <Button onClick={handleClose} autoFocus>
+              {skip_btn_cancel}
+            </Button>
+          </DialogActions>
+        </Dialog>
+      </div>
 
       
     </>  
