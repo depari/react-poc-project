@@ -28,35 +28,35 @@ function MainViewItem() {
 
   return  (
     <>
-      <div align="center">
+      <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>
         <h1>{main_title}</h1>
       </div>
-      <div align="center">
+      <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>
         <h2>{main_description}</h2>
       </div>
       
-      <div align="right">
+      <div style={{display: 'flex',  justifyContent:'right', alignItems:'center'}}>
         <Button variant="outlined">{item_btn_viewdetail}</Button> 
       </div>
       {
         main_cb_all.length > 0  &&
-        <div align="center">
+        <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>
           <input type={'checkbox'} name={main_cb_all} /> {main_cb_all}
         </div>
 
       }
       
       
-      <div align="center">
+      <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>
         <h3>{main_disclaimer}</h3>
       </div>
       
-      <div align="center">
+      <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>
         <Button variant="outlined">{main_btn_agree}</Button>
       </div>
 
 
-      <div align="right">
+      <div style={{display: 'flex',  justifyContent:'right', alignItems:'center'}} >
         <Button variant="outlined" onClick={handleClickOpen}>
           Trigger Skip
         </Button>
