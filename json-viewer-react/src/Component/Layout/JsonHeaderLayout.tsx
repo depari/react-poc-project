@@ -5,14 +5,15 @@ import LanguageSelector from '../Item/LanguageSelector';
 function JsonHeaderLayout() {
     return (
         <>
-            <table border='1'>
-                <tr>
-                    <td><CountrySelector /></td>
-                    <td><LanguageSelector /></td>
-                </tr>
-                <tr>
-                    
-                </tr>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><CountrySelector /></td>
+                        <td><LanguageSelector /></td>
+                    </tr>
+
+                </tbody>
+                
 
             </table>           
             

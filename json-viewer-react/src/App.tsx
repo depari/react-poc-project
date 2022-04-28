@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import logo from './logo.svg'
 // import './App.css'
 import JsonHeaderLayout from './Component/Layout/JsonHeaderLayout';
@@ -13,6 +13,9 @@ import Container from '@mui/material/Container';
 function App() {
 
   const {setCurCountryCode, setCurLanguageCode, loadJsonFile}  = JsonStore();
+  useEffect(() => {
+    window.runStartupTasks();
+  });
 
   
 
