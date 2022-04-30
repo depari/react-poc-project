@@ -7,6 +7,8 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 
+import ConsentItemList from './ConsentItemList';
+
 import JsonStore from '../../JsonStore';
 
 function MainViewItem() {
@@ -35,9 +37,13 @@ function MainViewItem() {
         <h2>{main_description}</h2>
       </div>
       
-      <div style={{display: 'flex',  justifyContent:'right', alignItems:'center'}}>
-        <Button variant="outlined">{item_btn_viewdetail}</Button> 
-      </div>
+      <ConsentItemList/>
+
+      {/* <div style={{display: 'flex',  justifyContent:'right', alignItems:'center'}}>
+        <ConsentItem/>
+      </div> */}
+
+
       {
         main_cb_all.length > 0  &&
         <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>
@@ -53,6 +59,7 @@ function MainViewItem() {
       
       <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>
         <Button variant="outlined">{main_btn_agree}</Button>
+        
       </div>
 
 
