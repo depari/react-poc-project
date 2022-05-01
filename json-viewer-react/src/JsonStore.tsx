@@ -4,8 +4,8 @@ interface jsonData {
     json_path:string;
     json_data:string;
     json_object : any;
-    country_list:Array<object>;
-    language_list:Array<object>;
+    country_list:Array<string>;
+    language_list:Array<string>;
 
     cur_country_code:string;    
     cur_language_code:string;
@@ -61,8 +61,8 @@ const JsonStore = create<jsonData>((set, get) => ({
             console.log(typeof(JSON.parse(data)));
 
             const _jsonOject : any = JSON.parse(data);
-            const _countryList : Array<object> = [];
-            const _languageList : Array<object> = [];
+            const _countryList : Array<string> = [];
+            const _languageList : Array<string> = [];
             let _cur_country_code : string;
             let _cur_language_code : string;
 
@@ -73,8 +73,9 @@ const JsonStore = create<jsonData>((set, get) => ({
             {
                 console.log("-------------------------------------------");
                 console.log(key_country );
-                var country = {label:key_country, value : key_country};                 
-                _countryList.push(country);
+                // var country = {label:key_country, value : key_country};                 
+                // _countryList.push(country);
+                _countryList.push(key_country);
                 
 
                 for(var key_language in _jsonOject[key_country])
@@ -92,8 +93,9 @@ const JsonStore = create<jsonData>((set, get) => ({
             for(var key_language in _jsonOject[_cur_country_code])
             {
                 console.log("  " +key_language);
-                var language = {label:key_language, value : key_language};                 
-                _languageList.push(language);
+                // var language = {label:key_language, value : key_language};                 
+                // _languageList.push(language);
+                _languageList.push(key_language);
             }
             _cur_language_code =  Object.keys(_jsonOject[_cur_country_code])[0];           
             
@@ -116,14 +118,15 @@ const JsonStore = create<jsonData>((set, get) => ({
     setCurCountryCode:(_cur_country_code) =>  
     {
         ;
-        const _languageList : Array<object> = [];
+        const _languageList : Array<string> = [];
         let _cur_language_code : string;
         let _jsonObject:any = get().json_object;
         for(var key_language in _jsonObject[_cur_country_code])
         {
             console.log("  " +key_language);
-            var language = {label:key_language, value : key_language};                 
-            _languageList.push(language);
+            // var language = {label:key_language, value : key_language};                 
+            // _languageList.push(language);
+            _languageList.push(key_language);
         }
         _cur_language_code =  Object.keys(_jsonObject[_cur_country_code])[0];           
         
