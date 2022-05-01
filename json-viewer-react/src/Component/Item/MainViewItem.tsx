@@ -1,5 +1,6 @@
-import { Button } from "@mui/material";
-import React from "react";
+import { Button, Checkbox, FormGroup } from "@mui/material";
+import FormControlLabel from '@mui/material/FormControlLabel';
+import React, {KeyboardEvent} from "react";
 import Popup from "reactjs-popup";
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
@@ -17,6 +18,21 @@ function MainViewItem() {
 
 
   const [open, setOpen] = React.useState(false);
+  const [cb_all_checked, setCbAllChecked] = React.useState(false);
+
+  const handleCBChnge = () => {
+    setCbAllChecked(!cb_all_checked);
+  };
+
+  const handleCBKeyUp = (event:KeyboardEvent<HTMLLabelElement>) => {
+    if (event.key === 'Enter') {
+      console.log("Enter Key Pressed");
+      setCbAllChecked(!cb_all_checked);
+    }
+    
+  };
+  
+
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -26,6 +42,7 @@ function MainViewItem() {
     setOpen(false);
   };
 
+  
 
 
   return  (
@@ -47,7 +64,13 @@ function MainViewItem() {
       {
         main_cb_all.length > 0  &&
         <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>
-          <input type={'checkbox'} name={main_cb_all} /> {main_cb_all}
+
+          <FormGroup>
+            <FormControlLabel control={<Checkbox checked={cb_all_checked}/>} onChange={handleCBChnge} label={main_cb_all} 
+            onKeyUp={handleCBKeyUp} 
+            />
+          </FormGroup>          
+
         </div>
 
       }

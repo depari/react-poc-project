@@ -18,10 +18,8 @@ function ControlButtonsLayout() {
     return (
         <>
             <ButtonGroup>
-                <Button variant='outlined' onClick={() => initJsonFile("input.json")}>load_Json</Button>
-  
+                <Button variant='outlined' onClick={() => initJsonFile("input.json")}>load_Json</Button>  
                 <Button variant='outlined' onClick={() => dataUpdate()}>data_fetch</Button>
-
             </ButtonGroup>
         </>
     );
