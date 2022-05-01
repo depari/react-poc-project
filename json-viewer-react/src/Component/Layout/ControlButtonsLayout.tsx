@@ -10,6 +10,7 @@ function ControlButtonsLayout() {
     const {loadJsonFile, updateMeta}  = JsonStore();
     const initJsonFile = (path:string) => {
         loadJsonFile(path); 
+
     }
     
     const dataUpdate = () => {
