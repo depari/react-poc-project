@@ -25,7 +25,7 @@ declare global {
   console.log("SpatialNavigation.add");
   SpatialNavigation.set({
     distanceMode: true,
-    rememberSource: true,
+    rememberSource: false,
   });
 
   // Make the *currently existing* navigable elements focusable.

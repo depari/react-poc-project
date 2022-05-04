@@ -250,6 +250,17 @@
         return Math.sqrt(dx * dx + dy * dy);
         // return dx * dx + dy * dy;
       },
+
+      centerDistanceIsBetter: function (rect) {
+        var dx, dy;
+        dy = targetRect.center.y - rect.center.y;
+        dx = targetRect.center.x - rect.center.x;
+        
+        return Math.sqrt(dx * dx + dy * dy);
+        // return dx * dx + dy * dy;
+      },
+
+
     };
   }
 
