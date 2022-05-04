@@ -3,7 +3,9 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import "./index.css";
 
-import SpatialNavigation from "spatial-navigation-js";
+// import SpatialNavigation from "spatial-navigation-ts";
+// import SpatialNavigation from "./spatial_navigation.js";
+import SpatialNavigation from "./spatial_navigation";
 
 declare global {
   interface Window {
@@ -17,10 +19,15 @@ declare global {
   SpatialNavigation.init();
   console.log("SpatialNavigation.init();");
   // Define navigable elements (anchors and elements with "focusable" class).
-  SpatialNavigation.add({
-    selector: "a, .focusable, button, input",
+  SpatialNavigation.add("main", {
+    selector: "a, .focusable, button, input[type='checkbox']",
   });
   console.log("SpatialNavigation.add");
+  SpatialNavigation.set({
+    distanceMode: true,
+    rememberSource: true,
+  });
+
   // Make the *currently existing* navigable elements focusable.
   SpatialNavigation.makeFocusable();
   console.log("SpatialNavigation.makeFocusable");
